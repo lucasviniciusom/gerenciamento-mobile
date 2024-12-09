@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, Alert, StyleSheet } from 'react-native';
 import * as SecureStore from 'expo-secure-store'; // Armazenamento seguro
-import api from '../services/api'; // Serviço de API
+import api from '../service/api'; // Serviço de API
 
 export default function LoginPage({ navigation }) {
   const [email, setEmail] = useState('');
@@ -76,22 +76,24 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    padding: 20,
+    paddingHorizontal: 20,
+    paddingVertical: 40,
     backgroundColor: '#f5f5f5',
   },
   title: {
-    fontSize: 24,
-    marginBottom: 20,
+    fontSize: 28,
+    marginBottom: 30,
     textAlign: 'center',
     fontWeight: 'bold',
-    color: '#333',
+    color: '#4A90E2', // Cor de acento para o título
   },
   input: {
     borderWidth: 1,
-    padding: 10,
-    marginBottom: 10,
-    borderRadius: 5,
+    padding: 12,
+    marginBottom: 15,
+    borderRadius: 8,
     borderColor: '#ccc',
     backgroundColor: '#fff',
+    fontSize: 16,
   },
 });
